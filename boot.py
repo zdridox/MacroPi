@@ -16,10 +16,7 @@ btn4p.switch_to_input(pull=digitalio.Pull.DOWN)
 
 storage.disable_usb_drive()
 
-if btn1p.value:
-    if btn2p.value:
-        if btn3p.value:
-            if btn4p.value:
-                storage.enable_usb_drive()
+if (btn1p.value & btn2p.value & btn3p.value & btn4p.value):
+    storage.enable_usb_drive()
     
     
